@@ -22,50 +22,21 @@ This modular scan chain design enhances the testability and reliability of multi
 - tsv_pass: TSV test result – indicates TSV integrity.
 
 
-## Block Diagram of the SAR ADC 
+## Synthesized View 
 
  <p align="center">
-  <img width="800" height="500" src="/Images/block diagram.png">
+  <img width="800" height="500" src="/MODULAR SCAN CHAIN/SCHEMATIC.png">
 </p>
 
 
+## Simulation
 
-
-## Circuit Diagram of the Sample and Hold Circuit
-
- <p align="center">
-  <img width="800" height="500" src="/Images/Screenshot.png">
-</p>
-
-## Circuit Diagram of the Comparator Circuit
-
- <p align="center">
-  <img width="800" height="500" src="/Images/2.png">
-</p>
- <p align="center">
-   <img width="800" height="500" src="/Images/1.png">
-</p>
-
-
-## Pre-Layout Simulation
-
-###  Transient Analysis of Sample and Hold
+###  Functionality
 
 
  <p align="center">
-  <img width="800" height="500" src="/Images/switch.png">
+  <img width="800" height="500" src="/MODULAR SCAN CHAIN/SIMULATION WAVEFORM.png">
 </p>
-
-
-###  Transient Analysis of Comparator
-
-
- <p align="center">
-  <img width="800" height="500" src="/Images/compagood.png">
-</p>
-
-**Note: Current without Inverter for Enable Logic**
-
 
 
 ***************
@@ -74,26 +45,20 @@ This modular scan chain design enhances the testability and reliability of multi
 
 ## Future Work
 
-1. **Enhance SNDR and SFDR:** Use optimized capacitor sizing and layout to minimize mismatch, enhancing signal-to-noise distortion ratio (SNDR) and spurious free dynamic range (SFDR).
+1. **Power Optimization**: Implement power-saving techniques like clock gating or adaptive voltage scaling to reduce power consumption during testing, especially for energy-constrained applications like wearable or implantable devices.
 
-2. **Improve Effective Number of Bits (ENOB):** Design a high-precision, low-offset comparator to increase accuracy, contributing to a higher ENOB.
+2. **Error Detection and Correction**: Integrate error correction codes or redundancy mechanisms within the scan chain and TSV paths to improve reliability, particularly in environments where inter-die connections are prone to faults.
 
-3. **Reduce Noise:** Implement low-noise reference and power supply management techniques to suppress noise contributions from external sources.
+3. **Scalability for Higher Data Rates**: Enhance the design to support higher data rates and bandwidth for TSVs, accommodating future advancements in high-speed multi-die communication in 3D ICs.
 
-4. **Optimize Switching Energy:** Use advanced DAC switching techniques (e.g., split-capacitor switching) to minimize power consumption and switching noise, crucial for handling low-frequency ECG signals.
-
-5. **Fabricate and Test with Real Signals:** Plan for IC fabrication and real-time testing with ECG signal acquisition to validate performance, ensuring reliable operation in medical applications.
+4. **Built-In Self-Test (BIST) Integration**: Develop a Built-In Self-Test (BIST) mechanism to make the scan chain more autonomous, reducing the need for external test equipment and enabling more efficient, on-chip fault diagnosis and repair.
 
 ## Contributors 
 
-- **Maaz Ahmed** 
-- **Krishna Mouli** 
-- **Sandeep** 
-
+- **Maaz Ahmed**  
 
 
 ## Acknowledgments
-
 
 - Dr.Ediga Raghuveera , AdHoc Facukty , NIT AP (mentor)
 - Dr.Kiran Kumar Gurrala , Assistant Professor , NIT AP
