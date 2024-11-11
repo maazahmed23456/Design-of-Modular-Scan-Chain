@@ -6,7 +6,7 @@ This project is my final year major project and is still in development. This pr
 *Note: Circuit requires further improvents and integrations*
 
 
-## A Glance at the Scab Chain 
+## A Glance at the Scan Chain 
 
 This modular scan chain design enhances the testability and reliability of multi-die and 3D IC architectures by incorporating selective test access, TSV (Through-Silicon Via) support, and efficient data handling. The `test_access_en` signal allows isolated scan testing of individual dies, while TSV connections facilitate inter-die communication. TSV integrity is verified by comparing the TSV input (`tsv_in`) with the scan chain’s output, with the test outcome stored in `tsv_test_result`. Controlled by the `tsv_test_en` signal, this feature ensures reliable data transfer across dies. The scan chain, implemented using flip-flops, efficiently shifts data during testing, with a reset feature for proper initialization. This design optimizes fault detection, inter-die connectivity, and modular testing in complex IC systems.
 
